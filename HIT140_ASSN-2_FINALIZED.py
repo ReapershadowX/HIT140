@@ -4,7 +4,7 @@
 ## MANJIL BOLAKHE - S371743 ##
 ## SAYEM ALVI - S371489 ##
 
-
+# Import necessary libraries
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -22,7 +22,7 @@ column_names = [
     'UPDRS', 'PD indicator'
 ]
 
-# Load the dataset 
+# Load the dataset using pandas
 data = pd.read_csv('po1_data.csv', header=None, names=column_names)
 
 # Separate the data into PD and healthy groups
@@ -71,6 +71,7 @@ for variable in all_variables:
     healthy_values = healthy_group[variable]
     
     # Perform t-test
+    # A t-test is used to determine whether there is a significant difference between the means of two groups or populations. 
     t_stat, p_value = ttest_ind(pd_values, healthy_values)
     
     print(f"Variable: {variable}")
@@ -115,3 +116,4 @@ for variable in significant_variables:
     plt.title(f'Distribution of {variable}')
     plt.legend()
     plt.show()
+    
