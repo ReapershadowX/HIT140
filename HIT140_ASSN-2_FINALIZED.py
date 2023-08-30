@@ -106,7 +106,7 @@ for variable in significant_variables:
     pd_values = pd_group[variable]
     healthy_values = healthy_group[variable]
     
-    # Visualizing the distribution of the variable for each group
+    # Visualizing the distribution of the variable for each significant group
     plt.figure(figsize=(8, 6))
     plt.hist(pd_values, bins=20, color='blue', alpha=0.5, label='PD Group')
     plt.hist(healthy_values, bins=20, color='green', alpha=0.5, label='Healthy Group')
